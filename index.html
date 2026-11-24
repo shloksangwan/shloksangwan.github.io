@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shlok Sangwan · Web Developer &amp; Co-founder of MolBhav</title>
+  <meta name="description" content="Shlok Sangwan: B.Tech CSE student at upGrad School of Technology, co-founder of MolBhav, and web developer working with HTML, CSS, JavaScript and Python.">
+  <meta property="og:title" content="Shlok Sangwan · Web Developer">
+  <meta property="og:description" content="Co-founder of MolBhav. B.Tech CSE student building real web products.">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to content</a>
+
+  <!-- Top bar -->
+  <header class="bar">
+    <a href="#top" class="brand" aria-label="Shlok Sangwan, back to top">
+      <span class="brand-mark" aria-hidden="true">S<i>S</i></span>
+      <span class="brand-name">Shlok Sangwan</span>
+    </a>
+    <nav class="bar-nav" aria-label="Sections">
+      <a href="#work"><b>01</b> Work</a>
+      <a href="#skills"><b>02</b> Skills</a>
+      <a href="#about"><b>03</b> About</a>
+      <a href="#contact"><b>04</b> Contact</a>
+    </nav>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu <span aria-hidden="true">≡</span></button>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="menu" id="menu" hidden>
+    <a href="#work"><b>01</b>Work</a>
+    <a href="#skills"><b>02</b>Skills</a>
+    <a href="#about"><b>03</b>About</a>
+    <a href="#contact"><b>04</b>Contact</a>
+  </div>
+
+  <main id="top">
+    <!-- Hero: full-screen live shader -->
+    <section class="hero" aria-label="Introduction">
+      <canvas id="field" aria-hidden="true"></canvas>
+      <div class="hero-shade" aria-hidden="true"></div>
+      <div class="scan" aria-hidden="true"></div>
+
+      <div class="channel" aria-live="polite">
+        <span class="channel-label">CH <b id="ch-num">01</b> <span id="ch-name">Topo</span></span>
+        <button class="ch-btn" id="ch-prev" aria-label="Previous channel">▲</button>
+        <button class="ch-btn" id="ch-next" aria-label="Next channel">▼</button>
+      </div>
+
+      <div class="hero-copy">
+        <p class="kicker">// student · builder · co-founder</p>
+        <h1 class="display">
+          <span class="hl">Real problems,</span><br>
+          <span class="dim">working products.</span>
+        </h1>
+        <p class="hero-lead">
+          I'm Shlok, a B.Tech CSE student at upGrad School of Technology, Pune,
+          and co-founder of MolBhav. I build for the web with HTML, CSS,
+          JavaScript and Python.
+        </p>
+        <p class="status"><span class="live-dot" aria-hidden="true"></span>Open to beginner internships, freelance and collabs</p>
+      </div>
+
+      <nav class="big-nav" aria-label="Jump to section">
+        <a href="#work"><span class="num">01</span><span class="lbl">Work</span></a>
+        <a href="#skills"><span class="num">02</span><span class="lbl">Skills</span></a>
+        <a href="#about"><span class="num">03</span><span class="lbl">About</span></a>
+        <a href="#contact"><span class="num">04</span><span class="lbl">Contact</span></a>
+      </nav>
+
+      <div class="hud" aria-hidden="true">
+        <span>x <b id="hud-x">0.500</b></span>
+        <span>y <b id="hud-y">0.500</b></span>
+        <span><b id="hud-fps">60</b> fps</span>
+        <span>Pune <b id="hud-time">--:--</b> IST</span>
+        <span class="hud-hint">Move to stir · Click to change channel</span>
+      </div>
+    </section>
+
+    <!-- 01 Work -->
+    <section id="work" class="section">
+      <header class="sec-head">
+        <span class="sec-num">01</span>
+        <h2 class="display decode">Work</h2>
+      </header>
+
+      <article class="project feature">
+        <div class="screen" aria-hidden="true">
+          <div class="screen-top"><span>molbhav</span><span>● live</span></div>
+          <pre class="term"><span class="p">$</span> molbhav --market pune
+<span class="c">fetching AGMARKNET daily prices…</span>
+tomato   <span class="up">▲ buy now</span>
+onion    <span class="dn">▼ wait</span>
+potato   <span class="eq">■ steady</span>
+<span class="c">14-day estimate ready</span><span class="cursor">_</span></pre>
+        </div>
+        <div class="project-body">
+          <p class="tag">P.01 · Featured · Live product</p>
+          <h3 class="display">MolBhav</h3>
+          <p>
+            Real Pune mandi prices and what they'll do next. MolBhav helps restaurants and
+            cloud kitchens buy tomatoes, onions and potatoes at the right time, using daily
+            AGMARKNET data from data.gov.in, 3-month price charts, a 14-day estimate and a
+            simple Buy now / Wait / Steady signal.
+          </p>
+          <dl class="spec">
+            <div><dt>Role</dt><dd>Co-founder</dd></div>
+            <div><dt>Stack</dt><dd>Node.js, Express, JavaScript, Turso, Vercel</dd></div>
+            <div><dt>Links</dt><dd>
+              <a href="https://molbhav-gamma.vercel.app" target="_blank" rel="noopener">Live site ↗</a>
+              <a href="https://github.com/shloksangwan/molbhav-mvp" target="_blank" rel="noopener">Code ↗</a>
+            </dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <div class="project-row">
+        <article class="project">
+          <p class="tag">P.02 · 3D · Interactive</p>
+          <h3 class="display">LevityEnergy</h3>
+          <p>
+            A real-time 3D landing page for an energy-drink brand, with a spinnable,
+            flavour-reactive can and scroll-driven transitions.
+          </p>
+          <dl class="spec">
+            <div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
+            <div><dt>Links</dt><dd><a href="https://arj052.github.io/levity-energy-/" target="_blank" rel="noopener">Live site ↗</a></dd></div>
+          </dl>
+        </article>
+
+        <article class="project">
+          <p class="tag">P.03 · Web platform</p>
+          <h3 class="display">Awasar</h3>
+          <p>
+            A platform that connects young people with internships, mentorship and career
+            opportunities, to help close the gap between education and employment.
+          </p>
+          <dl class="spec">
+            <div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
+            <div><dt>Links</dt><dd><a href="https://arj052.github.io/Awasars/" target="_blank" rel="noopener">Live site ↗</a></dd></div>
+          </dl>
+        </article>
+      </div>
+    </section>
+
+    <!-- 02 Skills -->
+    <section id="skills" class="section">
+      <header class="sec-head">
+        <span class="sec-num">02</span>
+        <h2 class="display decode">Skills</h2>
+      </header>
+      <dl class="spec spec-lg">
+        <div><dt>Languages</dt><dd><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">Python</span><span class="chip">Java</span></dd></div>
+        <div><dt>Tools</dt><dd><span class="chip">Git &amp; GitHub</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">Vercel</span><span class="chip">GitHub Pages</span></dd></div>
+        <div><dt>Beyond code</dt><dd><span class="chip">Problem solving</span><span class="chip">Event organising</span><span class="chip">Teamwork</span><span class="chip">Analytical thinking</span></dd></div>
+        <div><dt>Practising</dt><dd><span class="chip">LeetCode</span><span class="chip">Codeforces</span></dd></div>
+      </dl>
+    </section>
+
+    <!-- 03 About -->
+    <section id="about" class="section">
+      <header class="sec-head">
+        <span class="sec-num">03</span>
+        <h2 class="display decode">About</h2>
+      </header>
+      <div class="about">
+        <figure class="fig">
+          <div class="fig-frame" aria-hidden="true"><span class="monogram">SS</span></div>
+          <figcaption><span>fig. 01</span> signal pending: photo coming soon</figcaption>
+        </figure>
+        <div class="about-text">
+          <p>
+            I'm a first-year B.Tech CSE student at upGrad School of Technology (ADYPU Campus).
+            I learn best by building, so most of what I know comes from shipping projects
+            that real people can use.
+          </p>
+          <p>
+            With MolBhav, I helped turn a simple question ("when should a kitchen buy onions?")
+            into a live product that reads Government mandi data and gives restaurants a clear
+            buy, wait or steady signal.
+          </p>
+          <p>
+            Outside class, I'm part of the student tech community at uGSOT. I was on the team
+            that organised an open-source session with GirlScript Foundation for 116 students.
+          </p>
+          <dl class="spec">
+            <div><dt>Studying</dt><dd>B.Tech CSE, uGSOT (2026 – 2030)</dd></div>
+            <div><dt>Building</dt><dd>MolBhav, co-founder</dd></div>
+            <div><dt>Based in</dt><dd>Pune, India</dd></div>
+            <div><dt>Community</dt><dd>Open-source session with GirlScript Foundation, 116 students</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 Contact -->
+    <section id="contact" class="section contact">
+      <header class="sec-head">
+        <span class="sec-num">04</span>
+        <h2 class="display decode">Say hello</h2>
+      </header>
+      <p class="contact-lead">
+        Looking for a beginner intern, a freelancer for a small web project, or someone to
+        build with? My inbox is open.
+      </p>
+      <a class="mail" href="mailto:shloksangwan058@gmail.com">shloksangwan058@gmail.com <span aria-hidden="true">↗</span></a>
+      <ul class="links-list">
+        <li><a href="https://www.linkedin.com/in/shloksangwan/" target="_blank" rel="noopener"><span>LinkedIn</span><span>in/shloksangwan ↗</span></a></li>
+        <li><a href="https://github.com/shloksangwan" target="_blank" rel="noopener"><span>GitHub</span><span>@shloksangwan ↗</span></a></li>
+        <li><a href="https://leetcode.com/u/shloksangwan/" target="_blank" rel="noopener"><span>LeetCode</span><span>u/shloksangwan ↗</span></a></li>
+        <li><a href="https://codeforces.com/profile/shloksangwan" target="_blank" rel="noopener"><span>Codeforces</span><span>shloksangwan ↗</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© <span id="year"></span> Shlok Sangwan</span>
+    <span>Hand-built with HTML, CSS, JS &amp; one shader</span>
+    <a href="#top">Back to top ▲</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
