@@ -1,0 +1,28 @@
+name: Update solved counts
+
+on:
+  schedule:
+    # 18:30 UTC is 12:00 AM in India (IST). GitHub can start scheduled runs a few minutes late.
+    - cron: '30 18 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch LeetCode and Codeforces counts
+        run: python3 .github/scripts/update-solved.py index.html
+      - name: Commit if the counts changed
+        run: |
+          if git diff --quiet; then
+            echo "Counts unchanged"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Update LeetCode and Codeforces solved counts"
+          git push
