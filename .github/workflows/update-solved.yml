@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: Fetch LeetCode and Codeforces counts
+      - name: Fetch LeetCode, Codeforces and CodeChef counts
         run: python3 .github/scripts/update-solved.py index.html
       - name: Commit if the counts changed
         run: |
@@ -24,5 +24,5 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -am "Update LeetCode and Codeforces solved counts"
+          git commit -am "Update LeetCode, Codeforces and CodeChef solved counts"
           git push

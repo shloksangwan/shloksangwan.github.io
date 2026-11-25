@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Update the LeetCode and Codeforces solved counts in the given files.
+"""Update the LeetCode, Codeforces and CodeChef solved counts in the given files.
 
-Any element with id="lc-solved" or id="cf-solved" gets the first number in its
+Any element with id="lc-solved", id="cf-solved" or id="cc-solved" gets the first number in its
 text replaced with the current count, so the surrounding words can be anything.
 If a site can't be reached, its count is left as it is.
 
@@ -42,9 +42,22 @@ def codeforces_solved():
                 for s in data["result"] if s.get("verdict") == "OK"})
 
 
+def codechef_solved():
+    # CodeChef has no public API for this, so read the number from the profile page
+    req = urllib.request.Request(f"https://www.codechef.com/users/{USER}",
+                                 headers={"User-Agent": "Mozilla/5.0 (solved-count-updater)"})
+    with urllib.request.urlopen(req, timeout=30) as resp:
+        page = resp.read().decode("utf-8", "replace")
+    match = re.search(r"Total Problems Solved:\s*(\d+)", page)
+    if not match:
+        raise RuntimeError("solved count not found on the CodeChef profile page")
+    return int(match.group(1))
+
+
 def main(paths):
     counts = {}
-    for key, fetch in (("lc-solved", leetcode_solved), ("cf-solved", codeforces_solved)):
+    for key, fetch in (("lc-solved", leetcode_solved), ("cf-solved", codeforces_solved),
+                       ("cc-solved", codechef_solved)):
         try:
             counts[key] = fetch()
             print(f"{key}: {counts[key]}")
