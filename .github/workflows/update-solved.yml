@@ -13,7 +13,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Fetch LeetCode and Codeforces counts
         run: python3 .github/scripts/update-solved.py index.html
       - name: Commit if the counts changed
