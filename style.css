@@ -209,6 +209,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   transition: border-color 0.2s, color 0.2s;
 }
 .chip:hover { border-color: var(--accent); color: var(--accent); }
+.spec dd a.chip { color: inherit; margin-right: 8px; border-bottom-color: var(--faint); }
+.spec dd a.chip:hover { color: var(--accent); border-color: var(--accent); }
 
 /* Projects */
 .project {
